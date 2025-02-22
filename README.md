@@ -1,10 +1,24 @@
-# Godot Engine
+# Godot Engine FreeBSD
 
 <p align="center">
   <a href="https://godotengine.org">
     <img src="logo_outlined.svg" width="400" alt="Godot Engine logo">
   </a>
 </p>
+
+## Compiling
+The [documentation](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_linuxbsd.html) for FreeBSD compiling is slightly outdated, so here is some slight modifications:
+
+The `py37-scons` package no longer exists; instead, use `scons-py311`.
+
+You may be getting errors about `gcc*` not existing; if that's the case, you can create some symlinks.
+
+Ex:
+```sh
+ln -s /usr/local/bin/gcc14 /usr/local/bin/gcc
+ln -s /usr/local/bin/gcc-ar14 /usr/local/bin/gcc-ar
+ln -s /usr/local/bin/gcc-ranlib14 /usr/local/gcc-ranlib
+```
 
 ## 2D and 3D cross-platform game engine
 
